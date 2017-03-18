@@ -24,6 +24,18 @@
       controller: 'estudianteController',
       controllerAs: 'estudianteCtrl'
     })
+    .state('estudiantePerfil',{
+      url: '/estudiantePerfil',
+      templateUrl: 'componentes/usuario/estudiantes/estudiantePerfil.view.html',
+      controller: 'estudianteController',
+      controllerAs: 'estudianteCtrl'
+    })
+    .state('profesorPerfil',{
+      url: '/profesorPerfil',
+      templateUrl: 'componentes/usuario/profesores/profesorPerfil.view.html',
+      controller: 'profesorController',
+      controllerAs: 'profesorCtrl'
+    })
     .state('usuario',{
       url: '/usuario',
       templateUrl: 'componentes/usuario/usuario.view.html',
