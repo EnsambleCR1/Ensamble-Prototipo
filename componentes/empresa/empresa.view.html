@@ -12,8 +12,9 @@
       <div class="col-md-6">
 
         <form name="formularioEmpresarial">
-
-          <div class="form-group" ng-class="{ 'has-error': formularioEmpresarial.nombreEmpresa.$dirty && formularioEmpresarial.nombreEmpresa.$invalid || formularioEmpresarial.nombreEmpresa.$error.pattern, 'has-success': formularioEmpresarial.nombreEmpresa.$valid}">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group" ng-class="{ 'has-error': formularioEmpresarial.nombreEmpresa.$dirty && formularioEmpresarial.nombreEmpresa.$invalid || formularioEmpresarial.nombreEmpresa.$error.pattern, 'has-success': formularioEmpresarial.nombreEmpresa.$valid}">
             <label for="txtNombreCliente" class="control-label">Nombre del cliente o empresa:</label>
               <input class="form-control" id="txtNombreCliente" name="nombreEmpresa" ng-model="empresaCtrl.nombre" ng-pattern="/^[a-zA-Z ]*$/" required>
               <div ng-messages="formularioEmpresarial.nombreEmpresa.$error">
@@ -21,8 +22,9 @@
                 <div ng-message="pattern" ng-show="!formularioEmpresarial.nombreEmpresa.$pristine" class="help-block">Solo se permiten letras</div>
               </div>
           </div>
-
-          <div class="form-group" ng-class="{ 'has-error': formularioEmpresarial.cedulaEmpresa.$dirty && formularioEmpresarial.cedulaEmpresa.$invalid || formularioEmpresarial.cedulaEmpresa.$error.pattern, 'has-success': formularioEmpresarial.cedulaEmpresa.$valid}">
+          </div>
+          <div class="col-md-6">
+            <div class="form-group" ng-class="{ 'has-error': formularioEmpresarial.cedulaEmpresa.$dirty && formularioEmpresarial.cedulaEmpresa.$invalid || formularioEmpresarial.cedulaEmpresa.$error.pattern, 'has-success': formularioEmpresarial.cedulaEmpresa.$valid}">
             <label for="txtCedulaEmpresa" class="control-label">Cédula cliente o empresa:</label>
               <input class="form-control" id="txtCedulaEmpresa" name="cedulaEmpresa" ng-model="empresaCtrl.cedula" ng-pattern="/^[0-9]*$/" required>
               <div ng-messages="formularioEmpresarial.cedulaEmpresa.$error">
@@ -31,6 +33,9 @@
               </div>
           </div>
 
+          </div>
+        </div>
+          
           <div class="form-group" ng-class="{ 'has-error': formularioEmpresarial.nombreContacto.$dirty && formularioEmpresarial.nombreContacto.$invalid || formularioEmpresarial.nombreContacto.$error.pattern, 'has-success': formularioEmpresarial.nombreContacto.$valid}">
             <label for="txtNombreContacto" class="control-label">Nombre de contacto:</label>
               <input class="form-control" id="txtNombreContacto" name="nombreContacto" ng-model="empresaCtrl.nombreContacto" ng-pattern="/^[a-zA-Z ]*$/" required>
