@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-md-6" id="bg-empresa">
         <div class="col-md-12 text-center">
-          <img src="componentes/imagenes/cenfotec_software_house.png" alt="">
+          <img src="componentes/imagenes/logoC.png" alt="">
           <h1>Solicitud Empresarial</h1>
           <p>Descripcion</p>
         </div>
@@ -35,7 +35,7 @@
 
           </div>
         </div>
-          
+
           <div class="form-group" ng-class="{ 'has-error': formularioEmpresarial.nombreContacto.$dirty && formularioEmpresarial.nombreContacto.$invalid || formularioEmpresarial.nombreContacto.$error.pattern, 'has-success': formularioEmpresarial.nombreContacto.$valid}">
             <label for="txtNombreContacto" class="control-label">Nombre de contacto:</label>
               <input class="form-control" id="txtNombreContacto" name="nombreContacto" ng-model="empresaCtrl.nombreContacto" ng-pattern="/^[a-zA-Z ]*$/" required>
@@ -69,22 +69,22 @@
               </div>
 
               <div class="col-md-6">
-                <div class="form-group" ng-class="{ 'has-error': formularioEmpresarial.telefonoContacto.$dirty && formularioEmpresarial.telefonoContacto.$invalid || formularioEmpresarial.telefonoContacto.$error.pattern, 'has-success': formularioEmpresarial.telefonoContacto.$valid}">
+                <div class="form-group" ng-class="{ 'has-error': formularioEmpresarial.industria.$dirty && formularioEmpresarial.industria.$invalid || formularioEmpresarial.industria.$error.pattern, 'has-success': formularioEmpresarial.industria.$valid}">
                   <label for="txtIndustria" class="control-label">Industria o sector:</label>
-                  <select id="txtIndustria" ng>
+                  <select id="txtIndustria" ng-model="empresaCtrl.industria">
                     <option value=""></option>
 
                   </select>
 
-                    <div ng-messages="formularioEmpresarial.telefonoContacto.$error">
-                      <div ng-message="required" ng-show="!formularioEmpresarial.telefonoContacto.$pristine
-                      || formularioEmpresarial.telefonoContacto.$submitted" class="help-block">Campo requerido</div>
+                    <div ng-messages="formularioEmpresarial.industria.$error">
+                      <div ng-message="required" ng-show="!formularioEmpresarial.industria.$pristine
+                      || formularioEmpresarial.industria.$submitted" class="help-block">Campo requerido</div>
                       <div ng-message="pattern" ng-show="!formularioEmpresarial.$pristine" class="help-block">Solo se permiten números</div>
                     </div>
                 </div>
               </div>
 
-              <button type="button" class="btn btn-primary">Enviar</button>
+              <button type="button" class="btn btn-primary" ng-click="empresaCtrl.save()">Enviar</button>
             </div>
           </div>
         </form>
