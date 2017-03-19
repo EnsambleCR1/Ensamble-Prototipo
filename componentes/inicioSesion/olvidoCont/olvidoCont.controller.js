@@ -8,13 +8,13 @@
 
 
       function init(){ // función que se llama así misma para indicar que sea lo primero que se ejecute
-        olvidoCont.usuarios = olvidoContService.getCorreos();
+        olvidoContController.usuarios = olvidoContService.getCorreos();
       }init();
 
       olvidoCont.solicitar = function (){
-        for(var i =0; i < olvidoContCtrl.usuarios.length; i++){
-          if(olvidoContCtrl.correo == olvidoContCtrl.usuarios[i]){
-            var usr = olvidoContCtrl.usuarios[i].correo;
+        for(var i =0; i < olvidoContController.usuarios.length; i++){
+          if(olvidoContController.correo == olvidoContController.usuarios[i]){
+            var usr = olvidoContController.usuarios[i].correo;
             olvidoContService.setCorreos(usr);
             }
 
