@@ -13,13 +13,13 @@
 
 
     function _setSolicitudEstudiantes(pnuevoEstudiante){
-      nuevoEstudiante.push(solicitudEstudiantes);
+      solicitudEstudiantes.push(pnuevoEstudiantes);
       localStorage.setItem('mSolicitudEstudiantesLocal',JSON.stringify(solicitudEstudiantes));
     }
 
     function _getSolicitudEstudiantes(){
-      var solicitudEstudianteLocal = JSON.parse(localStorage.getItem('mSolicitudEstudiantesLocal'));
-      return solicitudEstudianteLocal;
+      var solicitudEstLocal = JSON.parse(localStorage.getItem('mSolicitudEstudiantesLocal'));
+      return solicitudEstudiantes;
     }
   }
 

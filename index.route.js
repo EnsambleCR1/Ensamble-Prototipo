@@ -6,6 +6,10 @@
 
     function configuration($stateProvider, $urlRouterProvider){ //stateProvider
     $stateProvider
+    .state('inicio',{
+      url: '/inicio',
+      templateUrl: 'componentes/landing.html'
+    })
     .state('administrador',{
       url: '/administrador',
       templateUrl: 'componentes/administrador/administrador.view.html',
@@ -17,6 +21,9 @@
       templateUrl: 'componentes/empresa/empresa.view.html',
       controller: 'empresaController',
       controllerAs: 'empresaCtrl'
+    })
+    .state('administrador.carrera',{
+      templateUrl: 'componentes/administrador/carreras/carrera.view.html'
     })
     .state('inicioSesion',{
       url: '/inicioSesion',
@@ -48,9 +55,8 @@
       controller: 'verProyectoController',
       controllerAs: 'verProyectoCtrl'
     })
-            
-    $urlRouterProvider.otherwise('/inicioSesion');
 
+        $urlRouterProvider.otherwise('/inicio');
 
     }
     function tabCtrl($scope, $location, $log) {
@@ -59,13 +65,13 @@
         $scope.$watch('selectedIndex', function(current, old) {
             switch (current) {
                 case 0:
-                    $location.url("/inicioSesion");
+                    $location.url("/inicio");
                     break;
                 case 1:
-                    $location.url("/inicioSesion");
+                    $location.url("/inicio");
                     break;
                 case 2:
-                    $location.url("/inicioSesion");
+                    $location.url("/inicio");
                     break;
             }
         });
