@@ -6,11 +6,18 @@
 
     function configuration($stateProvider, $urlRouterProvider){ //stateProvider
     $stateProvider
+    .state('inicio',{
+      url: '/inicio',
+      templateUrl: 'componentes/landing.html',
+    })
     .state('administrador',{
       url: '/administrador',
       templateUrl: 'componentes/administrador/administrador.view.html',
       controller: 'administradorController',
       controllerAs: 'administradorCtrl'
+    })
+    .state('administrador.carrera',{
+      templateUrl: 'componentes/administrador/carreras/carrera.view.html'
     })
     .state('inicioSesion',{
       url: '/inicioSesion',
@@ -54,8 +61,8 @@
       controller: 'empresaController',
       controllerAs: 'empresaCtrl'
     })
-            
-    $urlRouterProvider.otherwise('/inicioSesion');
+
+    $urlRouterProvider.otherwise('/inicio');
 
 
     }

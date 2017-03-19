@@ -9,8 +9,8 @@
       function init(){ // función que se llama así misma para indicar que sea lo primero que se ejecute
 
       }init();
-      
-        
+
+
     }
      //se establece un objeto de angular normal
 
