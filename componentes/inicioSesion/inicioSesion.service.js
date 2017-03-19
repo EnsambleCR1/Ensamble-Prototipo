@@ -3,7 +3,7 @@
   .module('myEnsamble')
   .service('inicioSesionService', inicioSesionService);
 
-  function inicioSesionService(estudianteService){
+  function inicioSesionService(){
     var inicioSesion = [];
     var publicAPI = {
       inicioSesionUsuario : _inicioSesionUsuario
@@ -17,11 +17,16 @@
         if (usuarioLocal[i].correo == usuario.correo && usuarioLocal[i].contrasenna== usuario.contrasenna) {
           return true;
         }
-
+          
       }
     }
+      
+    function _nombreInicio(pTrue){
+      var datosUsuario = inicioSesionService._inicioSesionUsuario();
+        if (datosUsuario == true){
+            return usuarioLocal[i].name;
+      }
+    }      
   }
 })();
-/* if (userLocal[i].email == user.name && userLocal[i].password == user.password) {
-  return true;
-}*/
+

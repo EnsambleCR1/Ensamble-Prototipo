@@ -12,6 +12,12 @@
       controller: 'administradorController',
       controllerAs: 'administradorCtrl'
     })
+    .state('empresa',{
+      url: '/empresa',
+      templateUrl: 'componentes/empresa/empresa.view.html',
+      controller: 'empresaController',
+      controllerAs: 'empresaCtrl'
+    })
     .state('inicioSesion',{
       url: '/inicioSesion',
       templateUrl: 'componentes/inicioSesion/inicioSesion.view.html',
@@ -20,39 +26,27 @@
     })
     .state('estudiante',{
       url: '/estudiante',
-      templateUrl: 'componentes/usuario/estudiantes/estudiante.view.html',
-      controller: 'estudianteController',
-      controllerAs: 'estudianteCtrl'
+      templateUrl: 'componentes/usuario/estudiantes/solicitudEstudiante.view.html',
+      controller: 'solicitudEstudianteController',
+      controllerAs: 'solicitudEstudianteCtrl'
     })
     .state('estudiantePerfil',{
       url: '/estudiantePerfil',
-      templateUrl: 'componentes/usuario/estudiantes/estudiantePerfil.view.html',
-      controller: 'estudianteController',
-      controllerAs: 'estudianteCtrl'
+      templateUrl: 'componentes/usuario/estudiantes/estudiantePerfil/estudiantePerfil.view.html',
+      controller: 'estudiantePerfilController',
+      controllerAs: 'estudiantePerfilCtrl'
     })
     .state('profesorPerfil',{
       url: '/profesorPerfil',
-      templateUrl: 'componentes/usuario/profesores/profesorPerfil.view.html',
+      templateUrl: 'componentes/usuario/profesores/profesorPerfil/profesorPerfil.view.html',
       controller: 'profesorController',
       controllerAs: 'profesorCtrl'
     })
-    .state('usuario',{
-      url: '/usuario',
-      templateUrl: 'componentes/usuario/usuario.view.html',
-      controller: 'usuarioController',
-      controllerAs: 'usuarioCtrl'
-    })
-    .state('usuarioContrasenna',{
-      url: '/usuarioContrasenna',
-      templateUrl: 'componentes/usuario/usuarioContrasenna.view.html',
-      controller: 'usuarioController',
-      controllerAs: 'usuarioCtrl'
-    })
-    .state('empresa',{
-      url: '/empresa',
-      templateUrl: 'componentes/empresa/empresa.view.html',
-      controller: 'empresaController',
-      controllerAs: 'empresaCtrl'
+     .state('verProyecto',{
+      url: '/verProyecto',
+      templateUrl: 'componentes/usuario/estudiantes/verProyectos/verProyecto.view.html',
+      controller: 'verProyectoController',
+      controllerAs: 'verProyectoCtrl'
     })
             
     $urlRouterProvider.otherwise('/inicioSesion');

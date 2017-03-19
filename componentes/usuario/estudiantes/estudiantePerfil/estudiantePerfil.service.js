@@ -3,7 +3,7 @@
   .module('myEnsamble')
   .service('estudianteService', estudianteService);
 
-  function estudianteService(){
+  function estudianteService( inicioSesionService){
     var estudiantes = [];
     var publicAPI = {
       setEstudiantes : _setEstudiantes,

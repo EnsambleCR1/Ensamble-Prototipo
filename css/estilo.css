@@ -213,3 +213,49 @@ i{
 }
 
 /* Fin estilos Empresa */
+
+/* Incio estilos solicitudEstudiante */
+#solicitudEstudiante #bg-solicitudEstudiante{
+  background-image: url("../componentes/imagenes/studentssignup.jpeg");
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+}
+
+#solicitudEstudiante #bg-solicitudEstudiante h1{
+  color: #fff;
+  font-weight: bold;
+  padding-top: 20vh;
+}
+
+#solicitudEstudiante #bg-solicitudEstudiante p{
+  color: #fff;
+}
+
+#solicitudEstudiante #bg-solicitudEstudiante img{
+  padding-top: 15vh;
+}
+
+#solicitudEstudiante label{
+  padding-top: 5vh;
+}
+
+#solicitudEstudiante .form-control{
+  border-radius: none;
+  -webkit-appearance: none;
+}
+
+#solicitudEstudiante .btn-primary{
+    color: #000;
+    margin-top: 60px;
+    background-color: #fbb803;
+    border-color: #fbb803;
+    border-radius: 0;
+    width: 240px;
+    height: 50px;
+    font-size: 25px;
+    font-weight: bold;
+
+}
+
+/* Fin estilos solicitudEstudiante */
