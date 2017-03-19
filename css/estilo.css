@@ -1,0 +1,216 @@
+html{
+  font-family: 'Montserrat', sans-serif;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #000;
+}
+md-sidenav.md-default-theme, md-sidenav, md-sidenav.md-default-theme md-content, md-sidenav md-content {
+  /*background-image: linear-gradient(135deg, #3F51B5 0%, #667eea 100%);*/
+  background-image: linear-gradient(to top, #232323 0%, #232323 );
+  height: 100vh;
+}
+md-sidenav img{
+  margin-top:30%;
+  margin-bottom: 30px;
+}
+md-sidenav h2{
+  color:#fff;
+}
+.bg-sidenav{
+  background:url(../componentes/imagenes/estudiante.jpeg);
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center;
+}
+.bg-sidenavEmp{
+  background:url(../componentes/imagenes/empresarial.jpg);
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center;
+}
+md-nav-bar.md-default-theme .md-nav-bar, md-nav-bar .md-nav-bar {
+  padding: 0px;
+  background-color: #232323;
+  color: #fff;
+}
+.md-nav-bar {
+    border-style: solid;
+    border-width: 0 0 1px;
+    height: 60px;
+    position: relative;
+}
+.md-input-focused label{
+  color: #000 !important;
+}
+
+md-input-container.md-default-theme:not(.md-input-invalid).md-input-focused .md-input, md-input-container:not(.md-input-invalid).md-input-focused .md-input, md-input-container.md-default-theme:not(.md-input-invalid).md-input-resized .md-input, md-input-container:not(.md-input-invalid).md-input-resized .md-input {
+  border-color: #000;
+  margin: 5px 0;
+}
+
+md-input-container .md-input{
+  color: #000;
+}
+
+md-input-container.md-default-theme .md-placeholder, md-input-container .md-placeholder, md-input-container.md-default-theme label, md-input-container label {
+  color: #000;
+}
+md-datepicker input{
+	color:#000;
+}
+md-input-container label{
+	color:#000;
+}
+md-input-container input{
+	color:#000;
+}
+md-input-container {
+  display: inline-block;
+  position: relative;
+  padding: 2px;
+  margin: 20px 0;
+  vertical-align: middle;
+}
+
+form{
+  font-size: 16px;
+  margin: 0px 30px;
+}
+#formLogin, #formRegister{
+  margin: 20px auto;
+  padding: 10px 0;
+}
+.menuFeatures{
+  display: block;
+  width: 180px;
+}
+.profilePic, .formActionButton{
+  text-align: center;
+}
+.register{
+  background-color: transparent;
+  border: 2px solid #E91E63;
+  padding: 0px 30px;
+  border-radius: 30px;
+  margin:10px;
+  color: #E91E63;
+  text-align: right;
+}
+.register:hover{
+  background-color: #E91E63;
+  transition: 0.3s ease-out;
+  color: #fff;
+  border: 2px solid #E91E63;
+}
+.session{
+  background-color: transparent;
+  padding: 10px 40px 5px 0;
+  font-size: 15px;
+  color: #fff;
+  border: none;
+}
+.sesion{
+  background-color: transparent;
+  padding: 20px 30px;
+  color: #fbb803;
+  border: none;
+}
+.session:hover{
+  color: #fbb803;
+  transition: 0.3s ease-out;
+}
+.md-button.md-default-theme:not([disabled]).md-focused, .md-button:not([disabled]).md-focused, .md-button.md-default-theme:not([disabled]):hover, .md-button:not([disabled]):hover {
+  background-color: #E91E63;
+  transition: 0.3s ease-out;
+  color: #fff;
+}
+ table{
+  border-collapse:collapse;
+}
+table thead th {
+  background-color: #e91e63;
+  color: #fff;
+  padding: 5px 25px;
+  font-size: 16px;
+  font-weight: normal;
+  border:1px solid #fff;
+}
+
+table tbody td {
+  text-align:center;
+  padding:1%;
+  border:1px solid rgba(0, 0, 0, 0.2);
+}
+span{
+  padding: 3%;;
+  display:block;
+}
+i{
+  color:#fff;
+  padding: 8px 0px;
+  font-size:20px;
+}
+.mdi{
+  padding: 0 20px 10px 20px;
+}
+
+.mar-left{
+	margin-right:30px;
+}
+#bg-contrasenna{
+  background-image: url("componentes/imagenes/aulascenfo.jpg");
+  background-position: center center;
+  background-size: cover;
+  height: 790px;
+}
+
+
+/* Incio estilos Empresa */
+
+#empresa #bg-empresa{
+  background-image: url("../componentes/imagenes/empresarial.jpg");
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+}
+
+#empresa #bg-empresa h1{
+  color: #fff;
+  font-weight: bold;
+  padding-top: 20vh;
+}
+
+#empresa #bg-empresa p{
+  color: #fff;
+}
+
+#empresa #bg-empresa img{
+  padding-top: 15vh;
+}
+
+#empresa label{
+  padding-top: 5vh;
+}
+
+#empresa .form-control{
+  border-radius: none;
+  -webkit-appearance: none;
+}
+
+#empresa .btn-primary{
+    color: #000;
+    margin-top: 60px;
+    background-color: #fbb803;
+    border-color: #fbb803;
+    border-radius: 0;
+    width: 240px;
+    height: 50px;
+    font-size: 25px;
+    font-weight: bold;
+
+}
+
+/* Fin estilos Empresa */

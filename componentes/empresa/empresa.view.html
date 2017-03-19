@@ -1,0 +1,89 @@
+<div id="empresa">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6" id="bg-empresa">
+        <div class="col-md-12 text-center">
+          <img src="componentes/imagenes/cenfotec_software_house.png" alt="">
+          <h1>Solicitud Empresarial</h1>
+          <p>Descripcion</p>
+        </div>
+
+      </div>
+      <div class="col-md-6">
+
+        <form name="formularioEmpresarial">
+
+          <div class="form-group" ng-class="{ 'has-error': formularioEmpresarial.nombreEmpresa.$dirty && formularioEmpresarial.nombreEmpresa.$invalid || formularioEmpresarial.nombreEmpresa.$error.pattern, 'has-success': formularioEmpresarial.nombreEmpresa.$valid}">
+            <label for="txtNombreCliente" class="control-label">Nombre del cliente o empresa:</label>
+              <input class="form-control" id="txtNombreCliente" name="nombreEmpresa" ng-model="empresaCtrl.nombre" ng-pattern="/^[a-zA-Z ]*$/" required>
+              <div ng-messages="formularioEmpresarial.nombreEmpresa.$error">
+                <div ng-message="required" ng-show="!formularioEmpresarial.nombreEmpresa.$pristine || formularioEmpresarial.nombreEmpresa.$submitted" class="help-block">Campo requerido</div>
+                <div ng-message="pattern" ng-show="!formularioEmpresarial.nombreEmpresa.$pristine" class="help-block">Solo se permiten letras</div>
+              </div>
+          </div>
+
+          <div class="form-group" ng-class="{ 'has-error': formularioEmpresarial.cedulaEmpresa.$dirty && formularioEmpresarial.cedulaEmpresa.$invalid || formularioEmpresarial.cedulaEmpresa.$error.pattern, 'has-success': formularioEmpresarial.cedulaEmpresa.$valid}">
+            <label for="txtCedulaEmpresa" class="control-label">Cédula cliente o empresa:</label>
+              <input class="form-control" id="txtCedulaEmpresa" name="cedulaEmpresa" ng-model="empresaCtrl.cedula" ng-pattern="/^[0-9]*$/" required>
+              <div ng-messages="formularioEmpresarial.cedulaEmpresa.$error">
+                <div ng-message="required" ng-show="!formularioEmpresarial.cedulaEmpresa.$pristine" class="help-block">Campo requerido</div>
+                <div ng-message="pattern" ng-show="!formularioEmpresarial.$pristine" class="help-block">Solo se permiten números</div>
+              </div>
+          </div>
+
+          <div class="form-group" ng-class="{ 'has-error': formularioEmpresarial.nombreContacto.$dirty && formularioEmpresarial.nombreContacto.$invalid || formularioEmpresarial.nombreContacto.$error.pattern, 'has-success': formularioEmpresarial.nombreContacto.$valid}">
+            <label for="txtNombreContacto" class="control-label">Nombre de contacto:</label>
+              <input class="form-control" id="txtNombreContacto" name="nombreContacto" ng-model="empresaCtrl.nombreContacto" ng-pattern="/^[a-zA-Z ]*$/" required>
+              <div ng-messages="formularioEmpresarial.nombreContacto.$error">
+                <div ng-message="required" ng-show="!formularioEmpresarial.nombreContacto.$pristine" class="help-block">Campo requerido</div>
+                <div ng-message="pattern" ng-show="!formularioEmpresarial.$pristine" class="help-block">Solo se permiten letras</div>
+              </div>
+          </div>
+
+          <div class="form-group" ng-class="{ 'has-error': formularioEmpresarial.emailContacto.$dirty && formularioEmpresarial.emailContacto.$invalid || formularioEmpresarial.emailContacto.$error.pattern, 'has-success': formularioEmpresarial.emailContacto.$valid}">
+            <label for="txtEmailContacto" class="control-label">Correo de contacto:</label>
+              <input class="form-control" id="txtEmailContacto" name="emailContacto" ng-model="empresaCtrl.emailContacto" ng-pattern="/^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/" required>
+              <div ng-messages="formularioEmpresarial.emailContacto.$error">
+                <div ng-message="required" ng-show="!formularioEmpresarial.emailContacto.$pristine" class="help-block">Campo requerido</div>
+                <div ng-message="pattern" ng-show="!formularioEmpresarial.$pristine" class="help-block">Correo inválido</div>
+              </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+
+              <div class="col-md-6">
+                <div class="form-group" ng-class="{ 'has-error': formularioEmpresarial.telefonoContacto.$dirty && formularioEmpresarial.telefonoContacto.$invalid || formularioEmpresarial.telefonoContacto.$error.pattern, 'has-success': formularioEmpresarial.telefonoContacto.$valid}">
+                  <label for="txtTelefonoContacto" class="control-label">Teléfono de contacto:</label>
+                    <input class="form-control" id="txtTelefonoContacto" name="telefonoContacto" ng-model="empresaCtrl.telefonoContacto" ng-pattern="/^[0-9]*$/" required>
+                    <div ng-messages="formularioEmpresarial.telefonoContacto.$error">
+                      <div ng-message="required" ng-show="!formularioEmpresarial.telefonoContacto.$pristine" class="help-block">Campo requerido</div>
+                      <div ng-message="pattern" ng-show="!formularioEmpresarial.$pristine" class="help-block">Solo se permiten números</div>
+                    </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-group" ng-class="{ 'has-error': formularioEmpresarial.telefonoContacto.$dirty && formularioEmpresarial.telefonoContacto.$invalid || formularioEmpresarial.telefonoContacto.$error.pattern, 'has-success': formularioEmpresarial.telefonoContacto.$valid}">
+                  <label for="txtIndustria" class="control-label">Industria o sector:</label>
+                  <select id="txtIndustria" ng>
+                    <option value=""></option>
+
+                  </select>
+
+                    <div ng-messages="formularioEmpresarial.telefonoContacto.$error">
+                      <div ng-message="required" ng-show="!formularioEmpresarial.telefonoContacto.$pristine
+                      || formularioEmpresarial.telefonoContacto.$submitted" class="help-block">Campo requerido</div>
+                      <div ng-message="pattern" ng-show="!formularioEmpresarial.$pristine" class="help-block">Solo se permiten números</div>
+                    </div>
+                </div>
+              </div>
+
+              <button type="button" class="btn btn-primary">Enviar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
