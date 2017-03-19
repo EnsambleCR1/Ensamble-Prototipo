@@ -55,6 +55,12 @@
       controller: 'verProyectoController',
       controllerAs: 'verProyectoCtrl'
     })
+    .state('olvidoCont',{
+     url: '/olvidoCont',
+     templateUrl: 'componentes/inicioSesion/olvidoCont/olvidoCont.view.html',
+     controller: 'olvidoContController',
+     controllerAs: 'olvidoContCtrl'
+   })
 
         $urlRouterProvider.otherwise('/inicio');
 
