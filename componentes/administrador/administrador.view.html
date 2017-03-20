@@ -2,6 +2,16 @@
   <div layout="row" >
     <md-sidenav layout-align="start center" md-is-locked-open="true"  flex="25">
       <img src="componentes/imagenes/logoC.png" alt="logo Soft House">
+        <button  class="sesion" layout-align="center end"> Proyectos</button>
+        <button  class="sesion" layout-align="center end"> Reportes</button>
+        <div class="dropdown">
+          <button class="btn sesion dropdown-toggle" type="button" data-toggle="dropdown">Editar</button>
+          <ul class="dropdown-menu">
+            <li><button class="drop" layout-align="center end"> Estudiantes</button></li>
+            <li><button class="drop" layout-align="center end"> Empresas</button></li>
+            <li><button class="drop" layout-align="center end"> Administradores</button></li>
+          </ul>
+        </div>
         <button class="sesion" layout-align="center end" ui-sref="administrador.carrera"> Carreras </button>
         <button class="sesion" layout-align="center end"> Reportes</button>
         <button class="sesion" layout-align="center end"> Editar</button>
@@ -16,7 +26,7 @@
         </div>
         <div>
           <i class="fa fa-calendar" aria-hidden="true"></i>
-          <button  class="session" layout-align="center end"> Calendario</button>
+          <button ui-sref="calendario" class="session" layout-align="center end"> Calendario</button>
         </div>
         <div>
           <i class="fa fa-cog" aria-hidden="true"></i>

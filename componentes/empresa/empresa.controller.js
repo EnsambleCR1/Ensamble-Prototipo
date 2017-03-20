@@ -2,7 +2,7 @@
   angular
     .module('myEnsamble')
     .controller('empresaController', empresaController);
-    function empresaController(empresaService){ //se inyecta el service userService en el controlador para que se tenga acceso
+    function empresaController(empresaService,proyectosService){ //se inyecta el service userService en el controlador para que se tenga acceso
       //controlador
       var empresaCtrl = this; //binding del controlador con el html, solo en el controlador
 
@@ -12,12 +12,18 @@
       }init();
 
       empresaCtrl.save = function (){
+        var newProyecto = {
         var newEmpresa = {
           nombre: empresaCtrl.nombre,
           cedula: empresaCtrl.cedula,
           nombreContacto: empresaCtrl.nombreContacto,
           emailContacto: empresaCtrl.emailContacto,
           telefonoContacto: empresaCtrl.telefonoContacto,
+          descripcion: empresaCtrl.descripcion,
+          industria: empresaCtrl.industria,
+          estado : 'pendiente'
+        }
+        proyectosService.setProyectos(newProyecto);
           industria: empresaCtrl.industria
         }
         empresaService.setEmpresas(newEmpresa);

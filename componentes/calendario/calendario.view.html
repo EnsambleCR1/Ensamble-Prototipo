@@ -4,11 +4,21 @@
       <img src="componentes/imagenes/logoC.png" alt="logo Soft House">
         <button  class="sesion" ui-sref="proyectos" layout-align="center end"> Proyectos</button>
         <button  class="sesion" layout-align="center end"> Reportes</button>
+        <div class="dropdown">
+          <button class="btn sesion dropdown-toggle" type="button" data-toggle="dropdown">Editar</button>
+          <ul class="dropdown-menu">
+            <li><button class="drop" layout-align="center end"> Estudiantes</button></li>
+            <li><button class="drop" layout-align="center end"> Empresas</button></li>
+            <li><button class="drop" layout-align="center end"> Administradores</button></li>
+          </ul>
+        </div>
         <button  class="sesion" layout-align="center end"> Editar</button>
     </md-sidenav>
 
     <md-content flex>
       <md-nav-bar aria-label="nav-bar" class="md-whiteframe-4dp left" flex>
+
+        <span flex></span> 
         <span flex></span>
         <div>
           <i class="fa fa-bell-o" aria-hidden="true"></i>
@@ -31,6 +41,18 @@
         <button  class="session" layout-align="center end"> Salir</button>
         </div>
       </md-nav-bar>
+      <div class="container">
+        <div class="row">
+          <div class="md-pad">
+            <i class="fa icon-black fa-calendar" aria-hidden="true"></i>
+          <h2>Calendario</h2>
+          </div>
+        </div>    
+      </div>
+    </md-content>
+  </div>
+</div>
+<div ui-view></div>
 
 
       <md-content flex class="container">

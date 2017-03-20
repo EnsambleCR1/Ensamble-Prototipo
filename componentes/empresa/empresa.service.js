@@ -17,7 +17,7 @@
     }
 
     function _getEmpresas(){
-      return empresa;
+      return empresas;
     }
   }
 
