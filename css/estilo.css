@@ -109,7 +109,6 @@ form{
   background-color: transparent;
   padding: 10px 40px 5px 0;
   font-size: 15px;
-  color: #fff;
   border: none;
 }
 .sesion{
@@ -166,7 +165,37 @@ i{
   background-size: cover;
   height: 790px;
 }
-
+/*Estilos administrador*/
+.dropdown-menu{
+  background:transparent;
+}
+.dropdown-menu ul{
+  color:#fff;
+    background:transparent;
+}
+.dropdown-menu li a{
+  color:#fff;
+  background:transparent;
+}
+.dropdown-menu>li>a:hover {
+     color: #fbb803; 
+    text-decoration: none;
+   background-color:transparent;
+}
+.drop{
+  background-color: transparent;
+  padding: 10px 30px;
+  color: #fff;
+  border: none;
+}
+.drop:hover{
+  color:#fbb803;
+}
+.btn:focus, .btn:hover {
+     color: #fbb803; 
+    text-decoration: none;
+}
+/*fin estilos administrador*/
 
 /* Incio estilos Empresa */
 
@@ -214,3 +243,22 @@ i{
 }
 
 /* Fin estilos Empresa */
+/*inicio calendario*/
+.icon-black{
+  color:#000;
+  float:left;
+  margin-right:20px;
+}
+.md-pad{
+  padding:35px 15px 0px 15px;
+}
+.md-padd{
+  padding:10px;
+}
+/*fin calendario*/
+/*inicio proyectos*/
+md-toolbar.md-default-theme:not(.md-menu-toolbar), md-toolbar:not(.md-menu-toolbar) {
+     background:#fff; 
+    color:#000;
+}
+/*fin de proyectos*/

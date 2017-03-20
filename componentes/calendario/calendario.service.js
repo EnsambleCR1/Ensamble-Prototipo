@@ -1,23 +1,22 @@
 (function(){
   angular
   .module('myEnsamble')
-  .service('empresaService', empresaService);
+  .service('calendarioService', calendarioService);
 
-  function empresaService(){
-    var empresas = [];
+  function calendarioService(){
+    var calendario = [];
     var publicAPI = {
-      setEmpresas : _setEmpresas,
-      getEmpresas : _getEmpresas
+      setCalendario : _setCalendario,
+      getCalendario : _getCalendario
     };
     return publicAPI; // todas las funciones que sean llamadas por ajax deben estar debajo del return, para que cuando angular corra el script haga el return y devuelva el api , las funciones debajo del return son privadas y se devuelve el api que es el que contiene las funciones
 
-    function _setEmpresas(pEmpresa){
-      empresas.push(pEmpresa);
-      alert('Empresa Guardada');
+    function _setCalendario(){
+      return calendario;
     }
 
-    function _getEmpresas(){
-      return empresas;
+    function _getCalendario(){
+      return calendario;
     }
   }
 

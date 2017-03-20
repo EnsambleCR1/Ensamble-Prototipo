@@ -24,6 +24,18 @@
       controller: 'estudianteController',
       controllerAs: 'estudianteCtrl'
     })
+    .state('estudiantePerfil',{
+      url: '/estudiantePerfil',
+      templateUrl: 'componentes/usuario/estudiantes/estudiantePerfil.view.html',
+      controller: 'estudianteController',
+      controllerAs: 'estudianteCtrl'
+    })
+    .state('profesorPerfil',{
+      url: '/profesorPerfil',
+      templateUrl: 'componentes/usuario/profesores/profesorPerfil.view.html',
+      controller: 'profesorController',
+      controllerAs: 'profesorCtrl'
+    })
     .state('usuario',{
       url: '/usuario',
       templateUrl: 'componentes/usuario/usuario.view.html',
@@ -41,6 +53,18 @@
       templateUrl: 'componentes/empresa/empresa.view.html',
       controller: 'empresaController',
       controllerAs: 'empresaCtrl'
+    })
+    .state('calendario',{
+      url: '/calendario',
+      templateUrl: 'componentes/calendario/calendario.view.html',
+      controller: 'calendarioController',
+      controllerAs: 'calendarioCtrl'
+    })
+    .state('proyectos',{
+      url: '/proyectos',
+      templateUrl: 'componentes/proyectos/proyectos.view.html',
+      controller: 'proyectosController',
+      controllerAs: 'proyectosCtrl'
     })
             
     $urlRouterProvider.otherwise('/inicioSesion');
