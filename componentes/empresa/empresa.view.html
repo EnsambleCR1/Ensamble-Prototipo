@@ -21,7 +21,7 @@
                 <div ng-message="required" ng-show="!formularioEmpresarial.nombreEmpresa.$pristine || formularioEmpresarial.nombreEmpresa.$submitted" class="help-block">Campo requerido</div>
                 <div ng-message="pattern" ng-show="!formularioEmpresarial.nombreEmpresa.$pristine" class="help-block">Solo se permiten letras</div>
               </div>
-          </div>
+            </div>
           </div>
           <div class="col-md-6">
             <div class="form-group" ng-class="{ 'has-error': formularioEmpresarial.cedulaEmpresa.$dirty && formularioEmpresarial.cedulaEmpresa.$invalid || formularioEmpresarial.cedulaEmpresa.$error.pattern, 'has-success': formularioEmpresarial.cedulaEmpresa.$valid}">
@@ -31,7 +31,7 @@
                 <div ng-message="required" ng-show="!formularioEmpresarial.cedulaEmpresa.$pristine" class="help-block">Campo requerido</div>
                 <div ng-message="pattern" ng-show="!formularioEmpresarial.$pristine" class="help-block">Solo se permiten números</div>
               </div>
-          </div>
+            </div>
 
           </div>
         </div>
@@ -39,6 +39,8 @@
         <div class="row">
           <div class="col-md-6">
             <div class="form-group" ng-class="{ 'has-error': formularioEmpresarial.nombreContacto.$dirty && formularioEmpresarial.nombreContacto.$invalid || formularioEmpresarial.nombreContacto.$error.pattern, 'has-success': formularioEmpresarial.nombreContacto.$valid}">
+
+          <div class="form-group" ng-class="{ 'has-error': formularioEmpresarial.nombreContacto.$dirty && formularioEmpresarial.nombreContacto.$invalid || formularioEmpresarial.nombreContacto.$error.pattern, 'has-success': formularioEmpresarial.nombreContacto.$valid}">
             <label for="txtNombreContacto" class="control-label">Nombre de contacto:</label>
               <input class="form-control" id="txtNombreContacto" name="nombreContacto" ng-model="empresaCtrl.nombreContacto" ng-pattern="/^[a-zA-Z ]*$/" required>
               <div ng-messages="formularioEmpresarial.nombreContacto.$error">
@@ -114,6 +116,9 @@
                     <div ng-message="pattern" ng-show="!formularioEmpresarial.$pristine" class="help-block">Campo inválido</div>
               </div>
             <button type="button" class="btn btn-primary" ng-click="empresaCtrl.save()">Enviar</button>
+
+              <button type="button" class="btn btn-primary" ng-click="empresaCtrl.save()">Enviar</button>
+            </div>
           </div>
         </form>
       </div>

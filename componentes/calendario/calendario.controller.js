@@ -15,3 +15,19 @@
      //se establece un objeto de angular normal
 
 })();
+      function init(){ // función que se llama así misma para indicar que sea lo primero que se ejecute
+        calendarioCtrl.calendarios = calendarioService.getCalendarios();
+      }init();
+
+      calendarioCtrl.save = function(){
+        var newTarea = {
+          fechaEntrega: calendarioCtrl.fechaEntrega,
+          nombre: calendarioCtrl.nombre,
+          descripcion: calendarioCtrl.descripcion
+        }
+        calendarioService.setCalendarios(newTarea);
+      }
+    }
+     //se establece un objeto de angular normal
+
+})();

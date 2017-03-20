@@ -6,11 +6,30 @@
 
     function configuration($stateProvider, $urlRouterProvider){ //stateProvider
     $stateProvider
+    .state('inicio',{
+      url: '/inicio',
+      templateUrl: 'componentes/landing.html'
+    })
     .state('administrador',{
       url: '/administrador',
       templateUrl: 'componentes/administrador/administrador.view.html',
       controller: 'administradorController',
       controllerAs: 'administradorCtrl'
+    })
+    .state('empresa',{
+      url: '/empresa',
+      templateUrl: 'componentes/empresa/empresa.view.html',
+      controller: 'empresaController',
+      controllerAs: 'empresaCtrl'
+    })
+    .state('calendario',{
+      url: '/calendario',
+      templateUrl: 'componentes/calendario/calendario.view.html',
+      controller: 'calendarioController',
+      controllerAs: 'calendarioCtrl'
+    })
+    .state('administrador.carrera',{
+      templateUrl: 'componentes/administrador/carreras/carrera.view.html'
     })
     .state('inicioSesion',{
       url: '/inicioSesion',
@@ -20,9 +39,9 @@
     })
     .state('estudiante',{
       url: '/estudiante',
-      templateUrl: 'componentes/usuario/estudiantes/estudiante.view.html',
-      controller: 'estudianteController',
-      controllerAs: 'estudianteCtrl'
+      templateUrl: 'componentes/usuario/estudiantes/solicitudEstudiante.view.html',
+      controller: 'solicitudEstudianteController',
+      controllerAs: 'solicitudEstudianteCtrl'
     })
     .state('estudiantePerfil',{
       url: '/estudiantePerfil',
@@ -38,21 +57,21 @@
     })
     .state('usuario',{
       url: '/usuario',
-      templateUrl: 'componentes/usuario/usuario.view.html',
-      controller: 'usuarioController',
-      controllerAs: 'usuarioCtrl'
+      templateUrl: 'componentes/usuario/estudiantes/estudiantePerfil/estudiantePerfil.view.html',
+      controller: 'estudiantePerfilController',
+      controllerAs: 'estudiantePerfilCtrl'
     })
-    .state('usuarioContrasenna',{
-      url: '/usuarioContrasenna',
-      templateUrl: 'componentes/usuario/usuarioContrasenna.view.html',
-      controller: 'usuarioController',
-      controllerAs: 'usuarioCtrl'
+    .state('profesorPerfil',{
+      url: '/profesorPerfil',
+      templateUrl: 'componentes/usuario/profesores/profesorPerfil/profesorPerfil.view.html',
+      controller: 'profesorController',
+      controllerAs: 'profesorCtrl'
     })
-    .state('empresa',{
-      url: '/empresa',
-      templateUrl: 'componentes/empresa/empresa.view.html',
-      controller: 'empresaController',
-      controllerAs: 'empresaCtrl'
+     .state('verProyecto',{
+      url: '/verProyecto',
+      templateUrl: 'componentes/usuario/estudiantes/verProyectos/verProyecto.view.html',
+      controller: 'verProyectoController',
+      controllerAs: 'verProyectoCtrl'
     })
     .state('calendario',{
       url: '/calendario',
@@ -68,7 +87,14 @@
     })
             
     $urlRouterProvider.otherwise('/inicioSesion');
+    .state('olvidoCont',{
+     url: '/olvidoCont',
+     templateUrl: 'componentes/inicioSesion/olvidoCont/olvidoCont.view.html',
+     controller: 'olvidoContController',
+     controllerAs: 'olvidoContCtrl'
+   })
 
+        $urlRouterProvider.otherwise('/inicio');
 
     }
     function tabCtrl($scope, $location, $log) {
@@ -77,13 +103,13 @@
         $scope.$watch('selectedIndex', function(current, old) {
             switch (current) {
                 case 0:
-                    $location.url("/inicioSesion");
+                    $location.url("/inicio");
                     break;
                 case 1:
-                    $location.url("/inicioSesion");
+                    $location.url("/inicio");
                     break;
                 case 2:
-                    $location.url("/inicioSesion");
+                    $location.url("/inicio");
                     break;
             }
         });

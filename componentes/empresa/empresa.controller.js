@@ -13,6 +13,7 @@
 
       empresaCtrl.save = function (){
         var newProyecto = {
+        var newEmpresa = {
           nombre: empresaCtrl.nombre,
           cedula: empresaCtrl.cedula,
           nombreContacto: empresaCtrl.nombreContacto,
@@ -23,6 +24,10 @@
           estado : 'pendiente'
         }
         proyectosService.setProyectos(newProyecto);
+          industria: empresaCtrl.industria
+        }
+        empresaService.setEmpresas(newEmpresa);
+        console.log(newEmpresa);
       }
     }
      //se establece un objeto de angular normal
