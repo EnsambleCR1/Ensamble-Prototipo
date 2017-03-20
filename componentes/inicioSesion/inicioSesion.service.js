@@ -17,16 +17,15 @@
         if (usuarioLocal[i].correo == usuario.correo && usuarioLocal[i].contrasenna== usuario.contrasenna) {
           return true;
         }
-          
+
       }
     }
-      
+
     function _nombreInicio(pTrue){
       var datosUsuario = inicioSesionService._inicioSesionUsuario();
         if (datosUsuario == true){
             return usuarioLocal[i].name;
       }
-    }      
+    }
   }
 })();
-

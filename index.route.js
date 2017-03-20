@@ -22,6 +22,12 @@
       controller: 'empresaController',
       controllerAs: 'empresaCtrl'
     })
+    .state('calendario',{
+      url: '/calendario',
+      templateUrl: 'componentes/calendario/calendario.view.html',
+      controller: 'calendarioController',
+      controllerAs: 'calendarioCtrl'
+    })
     .state('administrador.carrera',{
       templateUrl: 'componentes/administrador/carreras/carrera.view.html'
     })
