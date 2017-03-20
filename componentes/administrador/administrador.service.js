@@ -10,9 +10,8 @@
 
       },
       {
-        nombre: "Telematica",
-
-       }
+        nombre: "Telemática"
+      }
     ];
     var publicAPI = {
       setCarreras : _setCarreras,

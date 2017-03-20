@@ -12,8 +12,7 @@
 
       administradorCtrl.save = function (){
         var newCarrera = {
-          
-          nombre: administradorCtrl.name
+          nombre: administradorCtrl.nombre
 
         }
         administradorService.setCarreras(newCarrera);
