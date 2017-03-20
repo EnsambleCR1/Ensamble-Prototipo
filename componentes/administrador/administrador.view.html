@@ -32,6 +32,22 @@
         </div>
       </md-nav-bar>
 
+
+      <input type="text" name="" value="" placeholder="Ingresar Carrera" ng-model:"administradorCtrl.name">
+
+      <button type="button" name="button" ng-click="administradorCtrl.save()">Agregar</button>
+
+      <table>
+      <thead>
+        <th>Carrera</th>
+      </thead>
+      <tbody>
+        <tr ng-repeat="carreras in administradorCtrl.carreras">
+          <th>{{carreras.nombre}}</th>
+        </tr>
+      </tbody>
+    </table>
+
     <div ui-view></div>
     </md-content>
   </div>

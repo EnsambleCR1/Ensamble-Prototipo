@@ -6,8 +6,8 @@
   function carreraService(){
     var carreras = [
       {
-         "nombre": "Diseño y Desarrollo Web",
-         "cursos": [
+         nombre: "Diseño y Desarrollo Web",
+         cursos: [
           "Fundamentos de Programación Web",
           "Diseño Web I",
           "Introudccion a TI"

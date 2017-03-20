@@ -14,9 +14,6 @@
 
         var carreraNueva ={
           nombre : carreraCtrl.nombre,
-          cursos : [
-            carreraCtrl.curso
-          ]
 
         }
 
